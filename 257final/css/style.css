@@ -1,0 +1,115 @@
+
+
+* {
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'PT Sans Caption', sans-serif;
+  color: #333;
+ 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Garamond', serif;
+}
+
+section {
+  float: left;
+  display: table;
+  
+  width: 100%;
+  min-height: 300px;
+
+  background-image: url();
+  background-size: cover;
+  transition: width .4s;
+}
+
+@media screen and (min-width: 600px) {
+  section {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    width: 33%;
+  }
+}
+
+.wrp {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+section img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 99%;
+  height: 99%;
+  object-fit: cover;
+}
+
+article {
+  display: inline-block;
+  padding: 40px 20px;
+  width: 60%;
+  height: 60%;
+  
+  opacity: 0;
+  visibility: hidden;  
+
+  background-color: rgba(255, 255, 255, .9);
+  outline: 7px solid rgba(130, 61, 204, .5);
+  
+  transition: opacity .4s;
+  will-change: opacity, visibility;
+}
+
+section:hover article {
+  opacity: 1;
+  visibility: visible;
+}
+
+article date {
+  font-size: .8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #666;
+}
+
+article h2 {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+article button {
+  padding: 8px 12px;
+  border: 2px solid #333;
+  background: linear-gradient(#333, #333);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  
+  text-transform: uppercase;
+  color: #3339;
+  
+  transition-property: color, background-size;
+  transition-duration: .2s;
+  
+  will-change: background-size;
+}
+
+article button:hover {
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+/*
